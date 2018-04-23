@@ -35,7 +35,7 @@ phMods, phMod : PDWORD;
 nTemp, nTemp2, i : integer;
 szModName : array [0..1024] of Char;
 ModInfo : MODULEINFO;
-lpBuffer : array [0..1024] of Byte;
+lpBuffer : array [0..1024] of Byte; //Static array, will only play first 1024 bytes in memory. A dynamic array set to "SizeOfImage" is too large.
 
 procedure printHelp();
 begin
